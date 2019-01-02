@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+cd "$(dirname "$0")/.."
+
+# Standard push
+docker push "${DOCKER_IMAGE}"
+
+# And write out the build.properties
+cat <<EOF > build.properties
+NRTESTAPP_VERSION=${GIT_HASH}
+EOF

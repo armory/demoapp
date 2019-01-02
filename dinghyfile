@@ -1,0 +1,23 @@
+{
+  "application": "dinghytest",
+  "pipelines": [
+    {
+      "application": "dinghytest",
+      "name": "Dinghy-powered Pipeline",
+      "appConfig": {},
+      "keepWaitingPipelines": false,
+      "limitConcurrent": true,
+      "stages": [
+        {
+          "name": "Wait",
+          "refId": "1",
+          "requisiteStageRefIds": [],
+          "type": "wait",
+          "waitTime": 5
+        }
+      ],
+      "triggers": [ ]
+    }
+  ]
+}
+

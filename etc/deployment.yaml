@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kayentademo-prod
+  namespace: dev
+spec:
+  selector:
+    matchLabels:
+      app: kayentademo
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kayentademo
+    spec:
+      containers:
+        - name: kayentademo
+          image: docker.io/armory/newrelic-testapp:0e193db
+
+#          env:
+#            - name: version
+#              value: canary
