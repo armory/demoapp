@@ -20,7 +20,7 @@ will automagically pick this version when you change into the directory.
 ## Configuring For "Bad Behavior":
 
 Out of the box, the app should run a fairly well-behaved web service.
-If you configure the environment variable `BAD_BEHAVIOR` to anything, the
+If you configure the environment variable `BAD_BEHAVIOR` to "yes", the
 system will start to introduce, well, "bad behaviors":
 
   * All requests will be slowed down by 250-750ms (random delay)
