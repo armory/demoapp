@@ -8,7 +8,15 @@ class ApplicationController < ActionController::Base
 protected
   def custom_nr_attr
     version = ENV['version']
+    run_number = ENV['run_number']
+    instance_type = ENV['instance_type']
+
     logger.info("Setting version = #{version}")
+    logger.info("Setting run_number = #{run_number}")
+    logger.info("Setting instance_type = #{instance_type}")
+
     ::NewRelic::Agent.add_custom_attributes({ version: version })
+    ::NewRelic::Agent.add_custom_attributes({ run_number: run_number })
+    ::NewRelic::Agent.add_custom_attributes({ instance_type: instance_type })
   end
 end

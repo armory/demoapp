@@ -38,6 +38,11 @@ Relic Insights license key.  You can also set `NR_APP_NAME` to a reasonable
 name for your application (it will default to "My Application", and in
 development mode, will append " (Development)" to the name.
 
+These environment variables will be passed back to NewRelic, and can be used for canary and other analysis.
+* `version`: for example `v37` or `1.2.0`
+* `run_number`: for example, `manual` or `build38` or `1546611869826` or `01D0CM0J422S80BD2BDEYAYH61`
+* `instance_type`: for example, `canary` or `baseline`
+
 ## Configuring With Datadog:
 
 TBD
