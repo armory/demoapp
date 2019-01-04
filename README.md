@@ -17,6 +17,15 @@ installing [http://rvm.io](rvm) to easily install and manage ruby versions;
 the `.ruby_version` file will indicate which version will be needed and rvm
 will automagically pick this version when you change into the directory.
 
+## Configuring For "Bad Behavior":
+
+Out of the box, the app should run a fairly well-behaved web service.
+If you configure the environment variable `BAD_BEHAVIOR` to anything, the
+system will start to introduce, well, "bad behaviors":
+
+  * All requests will be slowed down by 250-750ms (random delay)
+  * Random requests (approx 10%) will generate unhandled exceptions (500 Server Error response)
+
 ## Configuring With New Relic:
 
 This app includes the NewRelic client (APM) and is set up to include a custom

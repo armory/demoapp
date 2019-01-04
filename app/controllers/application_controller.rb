@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  after_filter :custom_nr_attr
+  after_action :custom_nr_attr
 
 protected
   def custom_nr_attr
