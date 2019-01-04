@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
 
   def index
     # If configured for "bad behavior"...
-    if ENV['BAD_BEHAVIOR'].to_s != ""
+    if ENV['BAD_BEHAVIOR'].to_s == "yes"
       # ...sleep an additional 250-750ms
       sleep((250 + rand(500)) / Float(1000))
 
